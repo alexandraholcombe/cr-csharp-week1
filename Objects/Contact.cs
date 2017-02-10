@@ -8,12 +8,15 @@ namespace Contact.Objects
     private string _name;
     private string _phoneNumber;
     private string _address;
+    private int _id;
+    private static List<Contact> _instances = new List<Contact>{};
 
     public Contact(string name, string phoneNumber, string address)
     {
       _name = name;
       _phoneNumber = phoneNumber;
       _address = address;
+      _id = _instances.Count;
     }
 
     public string GetName()
@@ -38,12 +41,19 @@ namespace Contact.Objects
     {
       return _address;
     }
-
     public void SetAddress(string inputAddress)
     {
       _address = inputAddress;
     }
 
+    public static List<Contact> GetAll()
+    {
+      return _instances;
+    }
 
+    public int GetId()
+    {
+      return _id;
+    }
   }
 }

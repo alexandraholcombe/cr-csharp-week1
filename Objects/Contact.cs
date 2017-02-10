@@ -16,7 +16,7 @@ namespace AddressBook.Objects
             _name = name;
             _phoneNumber = phoneNumber;
             _address = address;
-            _instances.Add(this);
+            // _instances.Add(this);
             _id = _instances.Count;
         }
 

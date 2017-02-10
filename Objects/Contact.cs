@@ -52,6 +52,11 @@ namespace AddressBook.Objects
             return _instances;
         }
 
+        public void SaveContact()
+        {
+            _instances.Add(this);
+        }
+
         public int GetId()
         {
             return _id;

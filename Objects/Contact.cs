@@ -17,7 +17,7 @@ namespace AddressBook.Objects
             _phoneNumber = phoneNumber;
             _address = address;
             // _instances.Add(this);
-            _id = _instances.Count;
+            _id = _instances.Count + 1;
         }
 
         public string GetName()
@@ -60,6 +60,11 @@ namespace AddressBook.Objects
         public int GetId()
         {
             return _id;
+        }
+
+        public static Contact Find(int searchId)
+        {
+            return _instances[searchId - 1];
         }
     }
 }

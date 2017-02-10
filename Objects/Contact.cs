@@ -66,5 +66,10 @@ namespace AddressBook.Objects
         {
             return _instances[searchId - 1];
         }
+
+        public static void ClearAll()
+        {
+            _instances.Clear();
+        }
     }
 }

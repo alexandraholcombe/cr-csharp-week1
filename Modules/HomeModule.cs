@@ -20,7 +20,7 @@ namespace AddressBook
             };
 
             Get["/new_contact"] = _ => {
-
+                return View["add_contact_form.cshtml"];
             };
         }
     }

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Nancy;
 
-namespace Contact.Objects
+namespace AddressBook.Objects
 {
-  public class contact
+  public class Contact
   {
     private string _name;
     private string _phoneNumber;

@@ -1,5 +1,5 @@
 @{
-  Layout="Shared/_Layout.cshtml";
+    Layout="Shared/_Layout.cshtml";
 }
 
 <h1>Your Contact List</h1>
@@ -7,13 +7,15 @@
 {
     <h3>No contacts have been added.</h3>
 }
-<ul>
+<ul class="front-page">
     @foreach (var contact in Model)
     {
         <li><a href='/contact/@contact.GetId()'>@contact.GetName()</a></li>
     }
 </ul>
-<p><a href="/contact/new">Add a Contact</a></p>
-<form action="/contact/clear" method="post">
-    <button type="submit" class="btn">Clear All Contacts</button>
-</form>
+<div class="linkbox">
+    <p><a href="/contact/new" class="btn">Add a Contact</a></p>
+    <form action="/contact/clear" method="post">
+        <button type="submit" class="btn">Clear All Contacts</button>
+    </form>
+</div>

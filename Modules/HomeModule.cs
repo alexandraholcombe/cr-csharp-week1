@@ -13,13 +13,13 @@ namespace AddressBook
                 return View["index.cshtml", allContacts];
             };
 
-            Post["/contact/new"] = _ => {
+            Post["/contact/success"] = _ => {
                 var newContact = new Contact(Request.Form["contact-name"], Request.Form["contact-phone-number"], Request.Form["contact-address"]);
                 newContact.SaveContact();
                 return View["contact_added.cshtml", newContact];
             };
 
-            Get["/new_contact"] = _ => {
+            Get["/contact/new"] = _ => {
                 return View["add_contact_form.cshtml"];
             };
         }

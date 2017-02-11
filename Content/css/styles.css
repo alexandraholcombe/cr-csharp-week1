@@ -89,4 +89,5 @@ ul.front-page, .front-page li {
 .front-page li:hover {
     background-color: #f2f2f2;
     font-weight: 600;
+    cursor: pointer;
 }

@@ -1,0 +1,11 @@
+@{
+    Layout="Shared/_Layout.cshtml";
+}
+
+<h1>Search</h1>
+<form action='/search_results' method="post">
+  <label for="search">Contact Name:</label>
+  <input id="search" name="search" type="text" required>
+  <button type="submit" class="btn">Search</button>
+</form>
+<p><a href="/" class="btn space">Back</a></p>

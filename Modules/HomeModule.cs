@@ -38,6 +38,15 @@ namespace AddressBook
                 contact.RemoveContact();
                 return View["remove_contact.cshtml"];
             };
+
+            Get["/search"] = _ => {
+                return View["search_form.cshtml"];
+            };
+
+            Post["/search_results"] = _ => {
+                Contact selectedContact = Contact.SearchContact(Request.Form["search"]);
+                return View["view_contact.cshtml", selectedContact];
+            };
         }
     }
 }

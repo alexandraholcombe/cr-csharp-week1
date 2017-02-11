@@ -33,10 +33,10 @@ namespace AddressBook
                 return View["contact_clear.cshtml"];
             };
 
-            Post["/contact/{id}/remove"] = _ => {
+            Post["/contact/{id}/remove"] = parameters => {
                 Contact contact = Contact.Find(parameters.id);
                 contact.RemoveContact();
-                return View["remove_contact.cshtml", contact];
+                return View["remove_contact.cshtml"];
             };
         }
     }

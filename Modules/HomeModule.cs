@@ -28,9 +28,15 @@ namespace AddressBook
                 return View["view_contact.cshtml", contact];
             };
 
-            Post["/contact/clear"] = _ =>{
+            Post["/contact/clear"] = _ => {
                 Contact.ClearAll();
                 return View["contact_clear.cshtml"];
+            };
+
+            Post["/contact/{id}/remove"] = _ => {
+                Contact contact = Contact.Find(parameters.id);
+                contact.RemoveContact();
+                return View["remove_contact.cshtml", contact];
             };
         }
     }

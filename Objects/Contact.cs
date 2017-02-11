@@ -67,6 +67,11 @@ namespace AddressBook.Objects
             return _instances[searchId - 1];
         }
 
+        public void RemoveContact()
+        {
+            _instances.Remove(this);
+        }
+
         public static void ClearAll()
         {
             _instances.Clear();

@@ -6,7 +6,7 @@
 
 ## Description
 
-This web application will allow a user to
+This web application will allow a user to add contacts, view each contact, and clear all contacts from the page.
 
 ## Setup/Installation Requirements
 

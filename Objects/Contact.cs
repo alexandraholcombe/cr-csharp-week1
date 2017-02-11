@@ -76,5 +76,17 @@ namespace AddressBook.Objects
         {
             _instances.Clear();
         }
+
+        public static Contact SearchContact(string searchTerm)
+        {
+            foreach (var contact in _instances)
+            {
+                if (contact.GetName() == searchTerm)
+                {
+                    return contact;
+                }
+            }
+            return null;
+        }
     }
 }
